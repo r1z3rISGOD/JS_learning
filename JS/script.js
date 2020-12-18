@@ -16,7 +16,7 @@ privat: false
 for (let a = 0; a < 2; a++) {
     question1 = prompt('Один из последних просмотренных фильмов?');
     question2 = +prompt('Насколько оцените его?');
-    if(question1 != null && question2 != null && question1 != '' && question2 != '' && question1 < 50 && question2 < 50) {
+    if(question1 != null && question2 != null && question1 != '' && question2 != '' && question1.length < 50 && question2.length < 50) {
         PersonalMoviesDB.movies[question1] = question2;
     } else {
         a--;
